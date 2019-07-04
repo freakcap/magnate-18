@@ -1,0 +1,462 @@
+﻿<html>
+<head>
+    <title>MAGNATE' 18</title>
+    <meta charset="utf-8">
+   <link href='https://fonts.googleapis.com/css?family=Antic Didone' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arsenal' rel='stylesheet'>
+  <link rel="stylesheet" href="css/events.css">
+    
+<!--Flipper-->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--Menu-->
+    <link rel="canonical" href="http://www.thepetedesign.com/demos/square_menu_demo.html" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='css/menu.css' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="images/icon.png">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="js/jquery.menu.js"></script>
+    
+    <!--footer-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--go to top-->
+     <script src="js/GoTotop.js"></script>
+    
+    <style>
+        body {
+            background-color:black;
+        }
+        
+.info-card {
+    float: left;
+	-webkit-perspective: 600px;
+    -moz-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
+
+   
+    margin-top: 5%;
+    margin-left: 5%;
+    
+}
+
+.front, .back {
+	background: #FFF;
+	border-radius: 10px;
+	transition: -webkit-transform 1s;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+	backface-visibility: hidden;
+    -moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+    -o-transform-style: preserve-3d;
+	-o-backface-visibility: hidden;
+	border: 1px solid black;
+    
+        }
+
+.front {
+	overflow: hidden;
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	z-index: 1;
+}
+
+.back {
+	padding: 20px;
+	padding-top: 0px;
+	width: 300px;
+	height: 300px;
+	-webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+	overflow: hidden;
+font-size:18px;
+        }
+
+.info-card:hover .back {
+	-webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -o-transform: rotateY(0);
+    transform: rotateY(0);
+}
+
+.info-card:hover .front {
+	-webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.card-image {
+width: 100%;
+height: 100%;
+}
+        .button a:hover{
+          background: inherit;
+        }
+
+
+        .buttonflip a {
+            padding:9px 9px;
+            background-color:#101010;
+            color:white;
+            border:none;
+            font-size:15px;
+        text-align: center;
+    text-decoration: none;
+    display: inline-block;
+   cursor: pointer;
+            margin-left:70px;
+            font-family:'Arsenal';
+            letter-spacing: 2px;
+   
+}
+
+       
+.buttonflip a:hover {
+    background-color: white; 
+    color:#101010;
+   
+    border: 1px solid #101010;
+}
+        
+.fa {
+  padding: 25px;
+  font-size: 30px;
+  width: 25px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 5px;
+
+border-radius:0px;
+    color:white;
+}
+
+.fa:hover {
+    opacity: 0.9;
+    text-decoration:none;
+    color:cornflowerblue;
+}
+
+.fa-facebook:hover {
+  color:#306BF3;
+}
+
+.fa-google:hover {
+  color: #F95244;
+}
+
+
+.fa-instagram:hover {
+  color: #EB44F9;
+  
+}
+        
+              #backtop {
+	        position: fixed;
+            left:auto;right: 20px;top:auto;bottom: 20px;
+	        outline: none;
+            overflow:hidden;
+            color:#fff;
+            text-align:center;
+            background-color:#27CFC3;
+            height:40px;
+            width:40px;
+            line-height:40px;
+            font-size:14px;
+            border-radius:2px;
+            cursor:pointer;
+            transition:all 0.3s linear;
+            z-index:999999;
+
+            opacity:1;
+            display:none;
+        }
+        #backtop:hover {
+            background-color:blue;
+        }
+        #backtop.mcOut {
+            opacity:0;
+        }
+     </style>
+   <script>
+	  $(document).ready( function() {
+	    $(".sidemenu").square_menu();
+	  });
+		
+        
+	</script> 
+    
+    </head>
+    <body>
+        
+        <div class="title">EVENTS
+        <div class="menu">
+  <div class="wrapper">
+	  <div class="main" style="font-family: 'open sans'; letter-spacing:0px;">
+	    
+  	  
+      <div class="pagecontainer">
+        <div class="sidemenu">
+          <nav class="left">
+            <a href="home.html" onhover="disphome()">Home</a>
+            <a href="events.html">Events</a>
+            <a href="Entreprenuers.html">Entreprenuers</a>
+            <a href="Aboutus.html">About Us</a>              
+          </nav>
+          <nav class="right">
+            <img src="images/edclogo.jpg" alt="EDC LOGO" style="width:420px;height:180px; margin-left:12%;">
+              <div id = "quote" style = "font-size:28px; font-weight:400; text-align :center; color:#3d1313;">Investing today, redefining tomorrow.</div>
+          </nav> 
+          </div> 
+        </div>
+      </div>
+    </div>
+    </div> 
+        </div>
+        
+        <div class="container">
+	<div class="row">		
+    	
+		<div class=" col-sm-4 col-md-4 col-lg-4">
+        <div class="info-card">
+				<div class="front">
+					<img class="card-image" src="images/betapitch1.png">
+				</div>
+			<div class="back">
+				<h2>Beta-Pitch</h2><hr style="border:1px solid #101010; width:100%;">
+				<p>
+					Beta-Pitch is an event where you put forth your ideas and give it a test to how much it matters in the real world.
+				</p>
+                <br><br>
+                <div class="buttonflip"><a href="#Event1">Know More</a></div>
+			</div>
+		</div>
+        </div>
+
+		<!-- Scrolling enabled for longer content -->
+		<div class="  col-sm-4 col-md-4 col-lg-4">
+        <div class="info-card">
+				<div class="front">
+					<img class="card-image" src="images/extempore.jpg">
+				</div>
+			<div class="back">
+				<h2>Eloquence</h2><hr style="border:1px solid #101010; width:100%;">
+				<p>
+					The event is a platform for you to improve your communication and presentation skills. 
+			</p><br><br>
+                 <div class="buttonflip"><a href="#Event2">Know More</a></div>
+			</div>
+		</div>
+        </div>
+        
+        <div class="  col-sm-4 col-md-4 col-lg-4">
+        <div class="info-card">
+				<div class="front">
+					<img class="card-image" src="images/MAD-ADS.jpg">
+				</div>
+			<div class="back">
+				<h2>Mads Ads</h2><hr style="border:1px solid #101010; width:100%;">
+				<p>
+					This event is specifically leans towards testing your marketing skills. An advertisement should be as good as its product it portrays.
+			</p>
+                 <div class="buttonflip"><a href="#Event3">Know More</a></div>
+			</div>
+		</div>
+        </div>
+
+    </div>
+    <div class="row">
+        
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="info-card">
+				<div class="front">
+					<img class="card-image" src="images/panel.jpg">
+				</div>
+			<div class="back">
+				<h2>Panel Discussion</h2><hr style="border:1px solid #101010; width:100%;">
+				<p>
+					In today’s’ corporate an opinion has a very high value. It is just words after all but the weight they carry great importance. 
+			</p>
+                 <div class="buttonflip"><a href="#Event6">Know More</a></div>			</div>
+		</div>
+        </div>
+		        <div class="  col-sm-4 col-md-4 col-lg-4">
+        <div class="info-card">
+				<div class="front">
+					<img class="card-image" src="images/XPresso.jpg">
+				</div>
+			<div class="back">
+				<h2>XPresso</h2><hr style="border:1px solid #101010; width:100%;">
+				<p>
+					In today’s’ corporate an opinion has a very high value. It is just words after all but the weight they carry great importance. 
+			</p>
+                 <div class="buttonflip"><a href="#Event6">Know More</a></div>			</div>
+		</div>
+        </div>
+        
+        
+    </div>
+    <hr style="border:1px solid red; width:100%;">
+  
+</div>  <hr style="border:1px solid red; width:100%;">      <div id="backtop">&#9650;</div>
+    
+       
+        
+    <div class="box1" id="Event1" style="border-left:5px solid #0d4781;"><h1 style="letter-spacing:5px; font-family:'Antic Didone'; font-weight:bold; color:white;"> Beta-Pitch</h1>
+      <hr style=" align:center;  width:150px; margin-left: auto; margin-right: auto; border-width: 2px; border-color:#e50000; ">
+       <p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+            Beta-Pitch is an event where you put forth your ideas and give it a test to how much it matters in the real world. This is a part of a bigger platform where you will be given a chance to present your idea, explain it, and put it out to test its applications.<br>
+			About the event:<br>
+			<ol style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+				<li>STAGE 1: Preliminary Round – Brief your idea</li>
+					<ol style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+						<li>Send your idea in brief. Should contain-</li>
+							<ul>
+								<li>Name</li>
+								<li>Problem Solution</li>
+								<li>Market analysis</li>
+								<li>Unique selling point</li>
+								<li>Team</li>
+							</ul>
+						<li>Your idea will be evaluated by judges’ short listing the top teams who will be eligible for the next stage.</li>
+					</ol>
+				<li>STAGE 2: Day of the event- Presentation</li>
+					<ul style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+						<li>Each team will be given 15 minutes to present your ideas live at the workshop (warning bell at 10 and 13 minutes).</li> 
+						<li>You need to convince the judges and the crowd why you think the people will invest in your ideas.</li> 
+						<li>You also need to talk about the pros and the cons of your idea.</li>
+						<li>The presentation will be followed by Q&A session.</li>
+						<li>The judging is going to be done by investors/professionals from the concerned field.</li>
+					</ul>
+			</ol>
+			
+<br>
+<p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">				
+Rules and Regulations:
+<ul style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+	<li>No limit to number of candidates per team.</li>
+	<li>Candidates pursuing undergraduate, graduate, post graduate programs can participate.</li>
+	<li>The proposed idea should be suitable for funding at some level to take it further.</li>
+	<li>The proposal of the idea should not be in violation of any intellectual property rights as far as you are aware.</li>
+	<li>The decision of the judges will be final and shall be respected.</li>
+</ul>
+<p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+Judging Criteria:
+<ul style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+	<li>Strength of your team.</li>
+	<li>Creativity or how innovative your idea/concept is.</li> 
+	<li>Originality</li>
+	<li>Implementation</li>
+	<li>Understanding of competitors.</li>
+	<li>Feasibility of the idea/product/business venture.</li>
+</ul>
+ <p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+      Niraj Sarode- 8087023885 </p>
+<p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+ENTRY FEE: ₹ 200/-     
+
+</ol>
+
+      </p>
+        <!--<button class="button"><a href="http://www.meraevents.com/event/innovatia-2017" style="color:inherit;">Register Now!</a></button>-->
+        </div>
+
+    
+        <div class="box1" id="Event2" style="border-left:5px solid #880e4f;"><h1 style=" letter-spacing:5px; font-family:'Antic Didone';  font-weight:bold; color:white;">ELOQUENCE</h1>
+        <hr style=" align:center;  width:150px; margin-left: auto; margin-right: auto; border-width: 2px; border-color:#e50000; ">
+        <p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+        The event is a platform for you to improve your communication and presentation skills. Something that you are prepared for and then you get the opportunity, it is then you speak up and enrapture the ones listening. The art of explanation is much complex to understand but so easy to implement. You just speak up and leave everyone spellbound that what you said is conducive.  </p>
+		<p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">Rules and regulations:</p>
+		<ol style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+		<li>Contestants will be given time to prepare.</li>
+		<li>Outside help is allowed.</li>
+		<li>The speaker is allowed to make notes only on the given piece of paper.</li>
+		<li>The contestant is not allowed to read out the speech.</li></ol>
+<p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">ENTRY FEE: ₹50/-<br> Purva Shete- 9284092581 </p>
+		
+
+        </div>
+        
+        <div class="box1" id="Event3" style="border-left:5px solid #4520a7;"><h1 style=" letter-spacing:5px;font-family:'Antic Didone'; font-weight:bold; color:white;"> MAD ADS</h1>
+        <hr style=" align:center;  width:150px; margin-left: auto; margin-right: auto; border-width: 2px; border-color:#e50000; ">
+        <p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+			This event is specifically leans towards testing your marketing skills. An advertisement should be as good as its product it portrays. The skill of persuasion for making a consumer buy the product is what marketing Is all about. How the product caters to the needs of the consumer and highlighting its pros is what you need to do here.
+			Rules and Regulations:</p>
+			<ol style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+			<li>Each participant will be given a product. You need to advertise it in such a way so that the consumer is compelled to buy the product.</li><li>You will be given some time to think about it.</li> 
+			<li>And you have to present it in the best way possible.</li>
+			</ol>
+			<p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">Judging Criteria:</p>
+			<ol style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+			<li>Based on the Creativity of your ad.</li> 
+			<li>How you optimize the resources around you to make your point.</li>
+			<li>The language used and the way you present it.</li>
+			<li>How compelling your ad is to the consumer.</li>
+			</ol>
+			<p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+			ENTRY FEE: ₹50/- <br>Pratiksha Sancheti - 9146535393 
+			</p>
+        </div>
+        
+       
+        
+        <div class="box1" id="Event6" style="border-left:5px solid #ff5722;"><h1 style=" letter-spacing:5px; font-family:'Antic Didone'; font-weight:bold; color:white;"> PANEL DISCUSSION</h1>
+        <hr style=" align:center;  width:150px; margin-left: auto; margin-right: auto; border-width: 2px; border-color:#e50000; ">
+        <p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+    In today’s’ corporate an opinion has a very high value. It is just words after all but the weight they carry great importance. The entrepreneurs are all successful in their respective fields and as we know it’s not easy to reach that level without maintaining a certain level of consistency and observing a few disciplines. And the experience they have gained has much great value. Their opinions, the mindset are what the young aspiring entrepreneurs need to listen and to learn from it. <br>
+A chosen topic will be taken for discussion among the entrepreneurs. The audience can equally take part in it.
+Topic of the discussion will be disclosed a few days before or on the day of the event. Please do join us in the discussion that commences by making the atmosphere a learning environment.<br><br>
+Entry fee: No charge applicable.<br> But only limited seats available so do register quickly. Don’t miss out on this amazing opportunity. <br>Ajit Hande- 8806204686 <br>
+<input type="button" class="button" value="Register Now" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfpa2kAIxv0_kUysvK3NMNdPeYQ-N6Jz-YHW-WluMtNFFXX4Q/viewform?usp=pp_url'">
+
+</p>
+
+ </div>
+     
+        <div class="box1" id="Event6" style="border-left:5px solid #ff5722;"><h1 style=" letter-spacing:5px; font-family:'Antic Didone'; font-weight:bold; color:white;"> XPRESSO</h1>
+        <hr style=" align:center;  width:150px; margin-left: auto; margin-right: auto; border-width: 2px; border-color:#e50000; ">
+        <p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+    You’ll be given a few topics and you just need to pour your heart out and let it flow. Let your thoughts, ideas, opinions be inked down and create an impact on the reader.“The pen is mightier than the sword” is said and well known. And to this day is stays true to its meaning. We want you to think out of the box and just write down your view. <br><br>
+Rules and regulations:</p>
+<ol style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">
+<li>You have the freedom to write in any format you prefer. Poems, articles, reports, comprehensions, stories, etc. any way you see fit.</li>
+<li>The topics will be declared on 6th September, and the last date of submission will be 20nd September.</li></ol><br>
+<p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:20px;">Entry fee: No charge <br> Ajit Hande- 8806204686 </p>
+
+
+ </div>
+     <br>
+        <div class="foot row">
+           <div class="col-md-5">            
+              <img src="images/edclogo.jpg" alt="edc logo" style="width:280px;height:170px;">
+           </div>
+          <div class="col-md-4">   
+                <a href="https://www.facebook.com/PICTEDC/" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google"></a>
+              <a href="https://www.instagram.com/edcell_pict/" class="fa fa-instagram"></a><br>
+			 <p style="text-align: left; margin-left:20px; color:beige; font-family:'Arsenal'; font-size:15px;">
+			Contact Us: <br>
+			Prof. Pravin Patil:+91-9823916586<br>
+			Ajit Hande:+91-8806204686<br>
+			Pratiksha Sancheti:+91-9146535393<br> 
+			E-Mail:edcpict18@gmail.com
+			 </p>
+            </div>
+          <div class="col-md-3">
+		  <br><br><br>
+			<a href="Aboutus.html" style="font-size:20px">&copyMAGNATE Team</a>
+		</div>
+        </div>
+        
+        <br>
+           
+
+         </body></html>
